@@ -91,8 +91,6 @@ jspm_packages/
 # TernJS port file
 .tern-port
 
-# Documentation files (keep guide but ignore generated docs)
-# INTERVIEW-PREP-GUIDE.md  # Uncomment this if you want to ignore the guide
 docs/generated/
 
 # Railway deployment files
