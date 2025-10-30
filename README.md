@@ -42,7 +42,12 @@ The application is deployed and fully functional, showcasing real-time data fetc
 
 Github Repository:
 [GitHub Project Location - Refresher](https://github.com/redeyedev-208/react-shadcn-typescript-a11y-tanstack-refresher?tab=readme-ov-file)
+
+___
+## Variation of this demo using JSON Server
 Variation of this using accessibility and a JSON Server that isn't connecting to a supabase account is found below:
-The project also has tests with coverage and I tried for 100% but will settle for what we have now. 
+The project also has tests with coverage and I tried for 100% but will settle for what we have now.
+WCAG 2.2 AAA standard is set for the final result
+
 Cheers and have an amazing time on your development journey.
 [Netlify Live Demo - WCAG Url Tester](https://68fec903d48185fb74d80e73--react-shadcn-a11y-demo.netlify.app/)
