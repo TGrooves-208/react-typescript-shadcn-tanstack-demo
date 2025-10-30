@@ -1,0 +1,84 @@
+/* Container Queries Demo Styles */
+
+.container-demo {
+  container-type: inline-size;
+  container-name: atomic-demo;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Container query breakpoints */
+@container atomic-demo (min-width: 400px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@container atomic-demo (min-width: 600px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .demo-card {
+    transition: transform 0.2s ease;
+  }
+  
+  .demo-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@container atomic-demo (min-width: 800px) {
+  .responsive-grid {
+    gap: 1.5rem;
+  }
+  
+  .demo-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Add some visual flair for the demo */
+.demo-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.demo-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive text sizing with container queries */
+@container atomic-demo (min-width: 300px) {
+  .demo-card h4 {
+    font-size: 1rem;
+  }
+}
+
+@container atomic-demo (min-width: 500px) {
+  .demo-card h4 {
+    font-size: 1.125rem;
+  }
+}
+
+@container atomic-demo (min-width: 700px) {
+  .demo-card h4 {
+    font-size: 1.25rem;
+  }
+}

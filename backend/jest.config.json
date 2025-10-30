@@ -1,0 +1,27 @@
+{
+  "preset": "ts-jest/presets/default-esm",
+  "extensionsToTreatAsEsm": [".ts"],
+  "testEnvironment": "node",
+  "testMatch": [
+    "**/__tests__/**/*.test.ts",
+    "**/*.test.ts"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/", 
+    "/dist/",
+    "graphql.test.ts"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.ts",
+    "!src/**/*.d.ts"
+  ],
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+  "transform": {
+    "^.+\\.(ts|tsx)$": ["ts-jest", {
+      "useESM": true
+    }]
+  },
+  "moduleNameMapping": {
+    "^(\\.{1,2}/.*)\\.js$": "$1"
+  }
+}
